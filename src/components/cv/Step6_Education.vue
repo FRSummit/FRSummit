@@ -3,16 +3,13 @@
     <p class="title">Education</p>
     <div class="description">
         <table>
-            <thead>
                 <tr>
-                    <td class="degree">Degree</td>
-                    <td class="institution">Institution/Board</td>
-                    <td class="passint-year">Passing year</td>
-                    <td class="group">Group</td>
-                    <td class="result">Result</td>
+                    <th class="degree">Degree</th>
+                    <th class="institution">Institution/Board</th>
+                    <th class="passint-year">Passing year</th>
+                    <th class="group">Group</th>
+                    <th class="result">Result</th>
                 </tr>
-            </thead>
-            <tbody>
                 <tr v-for="(edu, i) in education" :key="i">
                     <td class="degree">{{ edu.degree }}</td>
                     <td class="institution">{{ edu.institutionOrBoard }}</td>
@@ -20,7 +17,6 @@
                     <td class="group">{{ edu.group }}</td>
                     <td class="result">{{ edu.result }}</td>
                 </tr>
-            </tbody>
         </table>
     </div>
     </div>
@@ -75,14 +71,15 @@ export default {
 }
 .education-section .description table {
     border: 2px solid #222222;
+  border-collapse: collapse;
 }
-.education-section .description table thead {
+.education-section .description table th {
     font-size: 15px;
     font-weight: bold;
+    border: 2px solid #222222;
 }
-.education-section .description table thead tr {
-}
-.education-section .description table thead tr td {
+.education-section .description table tr td {
+    border: 2px solid #222222;
 }
 .education-section .description table tbody {
     font-size: 15px;
@@ -93,16 +90,16 @@ export default {
 .education-section .description table tbody tr td {
 }
 .education-section .description table .degree {
-    width: 20%;
+    width: 15%;
 }
 .education-section .description table .institution {
-    width: 25%;
+    width: 30%;
 }
 .education-section .description table .passing-year {
     width: 20%;
 }
 .education-section .description table .group {
-    width: 20%;
+    width: 25%;
 }
 .education-section .description table .result {
     width: 15%;
