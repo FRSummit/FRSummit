@@ -16,7 +16,7 @@ const routes = [
     component: () => import('../views/About.vue')
   },
   {
-    path: '/cv',
+    path: '/cv-all',
     name: 'Curriculum Vitate',
     component: () => import('../views/CV.vue')
   }

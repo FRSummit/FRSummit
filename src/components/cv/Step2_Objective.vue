@@ -32,5 +32,6 @@ export default {
 .objective-section .description {
   margin: 0;
   padding: 4px 0;
+  font-size: 15px;
 }
 </style>

@@ -44,5 +44,6 @@ export default {
 }
 .summery-section li {
   padding: 4px 0;
+  font-size: 15px;
 }
 </style>

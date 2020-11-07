@@ -2,17 +2,15 @@
   <div class="personal-details-section">
     <p class="title">Personal Details</p>
     <div class="description">
-      <p class="full-name">
-        <span>Full name: </span>Fayazur Rahman Summit
-      </p>
-      <p class="gender">
-        <span>Gender: </span>Male
-      </p>
+      <p class="full-name"><span>Full name: </span>Fayazur Rahman Summit</p>
+      <p class="gender"><span>Gender: </span>Male</p>
       <p class="permanent-address">
-        <span>Permanent address: </span> West side of Polli sub-station, Fulbaria, Mymensingh 2216.
+        <span>Permanent address: </span> West side of Polli sub-station,
+        Fulbaria, Mymensingh 2216.
       </p>
       <p class="interest">
-        <span>Interest: </span>Problem Solving, Android App development, AI, Travelling, Cycling, Coffee.
+        <span>Interest: </span>Problem Solving, Android App development, AI,
+        Travelling, Cycling, Coffee.
       </p>
     </div>
   </div>
@@ -30,9 +28,6 @@ export default {
   overflow: hidden;
   margin-top: 10px;
 }
-.personal-details-section {
-    margin: 0;
-}
 .personal-details-section .title {
   margin: 0;
   font-size: 16px;
@@ -42,7 +37,7 @@ export default {
   padding: 4px 0;
 }
 .personal-details-section .description p {
-    margin: 0;
+  margin: 0;
   font-size: 15px;
   padding-bottom: 2px;
 }
