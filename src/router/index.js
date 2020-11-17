@@ -15,9 +15,15 @@ const routes = [
     component: () => import('../views/public/About.vue')
   },
   {
-    path: '/cv-all',
+    path: '/cv-v01',
     name: 'Curriculum Vitate',
-    component: () => import('../views/public/CV.vue')
+    component: () => import('../views/public/cv/CV_V01.vue')
+  },
+  // Private
+  {
+    path: '/update-frs-cv-v01',
+    name: 'FRSummit CV Update',
+    component: () => import('../views/private/UpdateCV/cv_v01/Update_CV.vue')
   }
 ]
 

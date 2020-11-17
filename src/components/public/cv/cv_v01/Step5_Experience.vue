@@ -9,7 +9,7 @@
       >
         <div class="farm-name">
           <img
-            src="../../../assets/images/square_bullet.png"
+            src="../../../../assets/images/square_bullet.png"
             alt="square bullet"
           />
           <p class="name-sec">
@@ -21,11 +21,11 @@
         </div>
         <div class="notable-work">
           <p class="notable-work-text">
-            <img src="../../../assets/images/arrow_bullet.png" />Notable Work
+            <img src="../../../../assets/images/arrow_bullet.png" />Notable Work
           </p>
           <ul class="task" v-for="(task, j) in exp.notable_work" :key="j">
             <p class="task-name">
-              <img src="../../../assets/images/circle_bullet.png" /> {{ task.task_name }}
+              <img src="../../../../assets/images/circle_bullet.png" /> {{ task.task_name }}
             </p>
             <li class="role">
               <span class="role-text">Role</span>
