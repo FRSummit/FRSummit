@@ -6,14 +6,14 @@
                 <tr>
                     <th class="degree">Degree</th>
                     <th class="institution">Institution/Board</th>
-                    <th class="passint-year">Passing year</th>
+                    <th class="passing-year">Passing year</th>
                     <th class="group">Group</th>
                     <th class="result">Result</th>
                 </tr>
                 <tr v-for="(edu, i) in education" :key="i">
                     <td class="degree">{{ edu.degree }}</td>
                     <td class="institution">{{ edu.institutionOrBoard }}</td>
-                    <td class="passint-year">{{ edu.passingYear }}</td>
+                    <td class="passing-year">{{ edu.passingYear }}</td>
                     <td class="group">{{ edu.group }}</td>
                     <td class="result">{{ edu.result }}</td>
                 </tr>
@@ -91,17 +91,22 @@ export default {
 }
 .education-section .description table .degree {
     width: 15%;
+    padding-left: 6px;
 }
 .education-section .description table .institution {
-    width: 30%;
+    width: 28%;
+    padding-left: 6px;
 }
 .education-section .description table .passing-year {
     width: 20%;
+    padding-left: 6px;
 }
 .education-section .description table .group {
-    width: 25%;
+    width: 22%;
+    padding-left: 6px;
 }
 .education-section .description table .result {
-    width: 15%;
+    width: 20%;
+    padding-left: 6px;
 }
 </style>

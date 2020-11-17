@@ -9,7 +9,7 @@
       <p class="my-phone">Phone: 01717627896, 01687858300</p>
     </div>
     <div class="right-section">
-      <img src="../../assets/images/FRS.jpg" alt="FRSummit" />
+      <img src="../../../assets/images/FRS.jpg" alt="FRSummit" />
     </div>
   </div>
 </template>

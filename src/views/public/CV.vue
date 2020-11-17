@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import Step1Top from "../components/cv/Step1_Top";
-import Step2Objective from "../components/cv/Step2_Objective";
-import Step3Summery from "../components/cv/Step3_Summery";
-import Step4Skills from "../components/cv/Step4_Skills";
-import Step5Experience from "../components/cv/Step5_Experience";
-import Step6Education from "../components/cv/Step6_Education";
-import Step7ExtraCurricularActivities from "../components/cv/Step7_ExtraCurricularActivities";
-import Step8PersonalDetails from "../components/cv/Step8_PersonalDetails";
+import Step1Top from "../../components/public/cv/Step1_Top";
+import Step2Objective from "../../components/public/cv/Step2_Objective";
+import Step3Summery from "../../components/public/cv/Step3_Summery";
+import Step4Skills from "../../components/public/cv/Step4_Skills";
+import Step5Experience from "../../components/public/cv/Step5_Experience";
+import Step6Education from "../../components/public/cv/Step6_Education";
+import Step7ExtraCurricularActivities from "../../components/public/cv/Step7_ExtraCurricularActivities";
+import Step8PersonalDetails from "../../components/public/cv/Step8_PersonalDetails";
 
 export default {
   name: "CV",
