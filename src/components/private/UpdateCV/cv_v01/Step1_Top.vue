@@ -4,19 +4,19 @@
     <form @submit.prevent="onSubmit">
       <div class="form-innse-section">
         <label class="label">Name </label>
-        <input class="input" type="text" v-model="info1" id="info1" />
+        <input class="input" type="text" v-model="name" id="name" />
       </div>
       <div class="form-innse-section">
         <label class="label" for="lname">Address </label>
-        <textarea class="textarea" type="text" v-model="info2" id="info2" />
+        <textarea class="textarea" type="text" v-model="address" id="address" />
       </div>
       <div class="form-innse-section">
         <label class="label" for="lname">Email </label>
-        <input class="input" type="text" v-model="info3" id="info3" />
+        <input class="input" type="text" v-model="email" id="email" />
       </div>
       <div class="form-innse-section">
         <label class="label" for="lname">Phone </label>
-        <input class="input" type="text" v-model="info4" id="info4" />
+        <input class="input" type="text" v-model="phone" id="phone" />
       </div>
       <div class="btn-section">
         <button type="submit">Submit</button>
@@ -26,22 +26,28 @@
 </template>
 
 <script>
+import TopNameAddressSectionModel from "../../../../models/cv/TopNameAddressSection";
+const TopSection = new TopNameAddressSectionModel();
+
 export default {
   data() {
     return {
-      info1: null,
-      info2: null,
-      info3: null,
-      info4: null,
-      info5: null,
-      info6: null,
-      info7: null,
-      leagueInfo: [],
+      name: null,
+      address: null,
+      email: null,
+      phone: null,
+      sectionInfo: [],
+      //   data: TopNameAddressSectionModel
     };
   },
   methods: {
     onSubmit() {
       console.log("SUbmitted");
+      TopSection.name = this.name;
+      TopSection.address = this.address;
+      TopSection.email = this.email;
+      TopSection.phone = this.phone;
+      console.log(TopSection);
     },
   },
 };
