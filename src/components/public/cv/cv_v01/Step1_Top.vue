@@ -1,21 +1,62 @@
 <template>
   <div class="name-section">
-    <div class="left-section">
-      <p class="my-name">Fayazur Rahman Summit</p>
-      <p class="my-address">
-        Address: Block A, Road 1, House 62/C, Bashundhara, Dhaka 1229
-      </p>
-      <p class="my-email">Email: www.frsummit1@gmail.com</p>
-      <p class="my-phone">Phone: 01717627896, 01687858300</p>
+    <div v-for="(info, i) in sectionInfo" :key="i">
+      <div class="left-section">
+        <p class="my-name">{{ info.name }}</p>
+        <p class="my-address">
+          Address: {{ info.address }}
+        </p>
+        <p class="my-email">Email: {{ info.email }}</p>
+        <p class="my-phone">Phone: {{ info.phone }}</p>
+      </div>
+      <div class="right-section">
+        <img src="../../../../assets/images/FRS.jpg" alt="FRSummit" />
+      </div>
     </div>
-    <div class="right-section">
-      <img src="../../../../assets/images/FRS.jpg" alt="FRSummit" />
+    <div v-if="!sectionInfo.TopSection">
+      <div class="left-section">
+        <p class="my-name">Fayazur Rahman Summit</p>
+        <p class="my-address">
+          Address: Block A, Road 1, House 62/C, Bashundhara, Dhaka 1229
+        </p>
+        <p class="my-email">Email: www.frsummit1@gmail.com</p>
+        <p class="my-phone">Phone: 01717627896, 01687858300</p>
+      </div>
+      <div class="right-section">
+        <img src="../../../../assets/images/FRS.jpg" alt="FRSummit" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import firebase from "firebase";
+export default {
+  data() {
+    return {
+      sectionInfo: [],
+    };
+  },
+  created() {
+    firebase
+      .database()
+      .ref("TopNameAddressSection")
+      .on("value", (snapshot) => {
+        for (let i = 0; i < Object.keys(snapshot.val()).length; i++) {
+          console.log("loop " + i);
+          if (
+            snapshot.val()[Object.keys(snapshot.val())[i]].TopSection.isSelected
+          ) {
+            this.sectionInfo = snapshot.val()[Object.keys(snapshot.val())[i]];
+            console.log(snapshot.val()[Object.keys(snapshot.val())[i]]);
+            console.log(this.sectionInfo);
+          }
+          // console.log(Object.keys(snapshot.val())[i])
+          // console.log(snapshot.val()[Object.keys(snapshot.val())[i]].TopSection.isSelected)
+        }
+      });
+  },
+};
 </script>
 
 <style scoped>

@@ -1,6 +1,7 @@
 <template>
   <div class="update-name-section">
     <p class="title-text">Update Name, Address &amp; Image</p>
+    <span class="close-modal" @click="closeModal">&times;</span>
     <form @submit.prevent="onSubmit">
       <div class="form-innse-section">
         <label class="label">Name </label>
@@ -26,6 +27,7 @@
 </template>
 
 <script>
+import firebase from "firebase";
 import TopNameAddressSectionModel from "../../../../models/cv/TopNameAddressSection";
 const TopSection = new TopNameAddressSectionModel();
 
@@ -42,12 +44,32 @@ export default {
   },
   methods: {
     onSubmit() {
-      console.log("SUbmitted");
+      console.log("Submitted");
       TopSection.name = this.name;
       TopSection.address = this.address;
       TopSection.email = this.email;
       TopSection.phone = this.phone;
+      TopSection.isSelected = false;
       console.log(TopSection);
+
+      firebase
+        .database()
+        .ref("TopNameAddressSection")
+        .push({
+          TopSection,
+        })
+        .then((data) => {
+          console.log(data);
+          (this.name = ""),
+            (this.address = ""),
+            (this.email = ""),
+            (this.phone = "");
+            this.closeModal()
+        })
+        .catch((error) => console.log(error));
+    },
+    closeModal() {
+      this.$emit("childToParent", "close modal");
     },
   },
 };
@@ -69,6 +91,17 @@ export default {
   color: #dafff6;
   font-weight: bold;
   margin-bottom: 20px;
+}
+.close-modal {
+  color: #dafff6;
+  font-size: 28px;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  cursor: pointer;
+}
+.close-modal:hover {
+  color: #8accbd;
 }
 .update-name-section .form-innse-section {
   margin-bottom: 10px;

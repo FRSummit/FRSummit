@@ -9,8 +9,24 @@
         >
           {{ topNameSectionBtnText }}
         </button>
+        <button
+          class="list-btn"
+          @click="selectItemClickHandler('NAME_ITEM_SELECTION')"
+          :class="topNameSectionlist ? 'update-btn-close' : ''"
+        >
+          {{ topNameSectionListBtn }}
+        </button>
         <Step1Top />
-        <UpdateStep1Top v-if="topNameSection" class="modal" />
+        <UpdateStep1Top
+          v-if="topNameSection"
+          class="modal"
+          v-on:childToParent="onChildClick"
+        />
+        <NameSectionList
+          v-if="topNameSectionlist"
+          class="list-modal"
+          v-on:listToUpdate="listToUpdateClick"
+        />
       </div>
     </div>
   </div>
@@ -18,18 +34,22 @@
 
 <script>
 import Step1Top from "../../../../components/public/cv/cv_v01/Step1_Top";
-import UpdateStep1Top from "../../../../components/private/UpdateCV/cv_v01/Step1_Top";
+import UpdateStep1Top from "../../../../components/private/UpdateCV/cv_v01/FormStep1_Top";
+import NameSectionList from "../../../../components/private/UpdateCV/cv_v01/ListStep1_Top";
 
 export default {
   name: "UpdateCV",
   components: {
     Step1Top,
     UpdateStep1Top,
+    NameSectionList,
   },
   data() {
     return {
       topNameSectionBtnText: "Update",
       topNameSection: false,
+      topNameSectionListBtn: "Select",
+      topNameSectionlist: false,
     };
   },
   methods: {
@@ -43,6 +63,28 @@ export default {
         this.topNameSection = true;
       }
     },
+    selectItemClickHandler(selectFromList) {
+      console.log(selectFromList);
+      if (this.topNameSectionlist) {
+        this.topNameSectionListBtn = "Select";
+        this.topNameSectionlist = false;
+      } else {
+        this.topNameSectionListBtn = "Close";
+        this.topNameSectionlist = true;
+      }
+    },
+    onChildClick(value) {
+      if (value) {
+        this.topNameSectionBtnText = "Update";
+        this.topNameSection = false;
+      }
+    },
+    listToUpdateClick(value) {
+      if (value) {
+        this.topNameSectionListBtn = "Select";
+        this.topNameSectionlist = false;
+      }
+    }
   },
 };
 </script>
@@ -72,8 +114,10 @@ export default {
   border: 1px solid #27272759;
   padding: 0 4px;
 }
-.update-btn {
+.update-btn,
+.list-btn {
   position: absolute;
+  top: 0;
   left: -80px;
   background-color: #272727;
   border-radius: 2px;
@@ -83,6 +127,10 @@ export default {
   color: #ffffff;
   padding: 8px 16px;
   font-size: 14px;
+  min-width: 80px;
+}
+.list-btn {
+  top: 40px;
 }
 .update-btn-close {
   background-color: red !important;
@@ -95,7 +143,18 @@ export default {
   left: 27%;
   top: 100px;
   width: 50%;
+  max-width: 650px;
   overflow: auto;
   background-color: rgb(0 0 0 / 70%);
+}
+.list-modal {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  padding: 20px 12px 0 0;
+  overflow: auto;
+  background-color: rgb(0 0 0 / 85%);
 }
 </style>
