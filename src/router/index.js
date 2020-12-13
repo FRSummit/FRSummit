@@ -19,6 +19,11 @@ const routes = [
     name: 'Curriculum Vitate',
     component: () => import('../views/public/cv/CV_V01.vue')
   },
+  {
+    path: '/port-v1',
+    name: 'F R Summit Portfolio v1',
+    component: () => import('../views/public/portfolio/portfolio-v1/Index.vue')
+  },
   // Private
   {
     path: '/update-frs-cv-v01',

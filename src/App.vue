@@ -1,22 +1,31 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/cv">CV</router-link>
-    </div>
+    <CommonLayout />
     <router-view/>
   </div>
 </template>
 
 <script>
+import CommonLayout from './components/Navbar/Common_layout.vue'
 export default {
+  components: {
+    CommonLayout
+  },
+  data() {
+    return {
+      viewsForCommonLayout: this.$store.state.commonLayoutIsPresent
+    }
+  },
+  created() {
+    console.log(this.viewsForCommonLayout);
+  }
 }
 </script>
 
 <style>
 body {
-  margin: 0;
+  margin:
+Common_layout 0;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

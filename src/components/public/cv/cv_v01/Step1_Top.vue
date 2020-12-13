@@ -43,13 +43,10 @@ export default {
       .ref("TopNameAddressSection")
       .on("value", (snapshot) => {
         for (let i = 0; i < Object.keys(snapshot.val()).length; i++) {
-          console.log("loop " + i);
           if (
             snapshot.val()[Object.keys(snapshot.val())[i]].TopSection.isSelected
           ) {
             this.sectionInfo = snapshot.val()[Object.keys(snapshot.val())[i]];
-            console.log(snapshot.val()[Object.keys(snapshot.val())[i]]);
-            console.log(this.sectionInfo);
           }
           // console.log(Object.keys(snapshot.val())[i])
           // console.log(snapshot.val()[Object.keys(snapshot.val())[i]].TopSection.isSelected)
