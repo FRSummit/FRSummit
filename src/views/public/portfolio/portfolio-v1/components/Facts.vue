@@ -1,6 +1,7 @@
 <template>
   <section id="facts" class="facts">
-    <div class="container" :data-aos="fade-up">
+    <!-- <div class="container" :data-aos="fade-up"> -->
+    <div class="container">
       <div class="section-title">
         <h2>Facts</h2>
         <p>

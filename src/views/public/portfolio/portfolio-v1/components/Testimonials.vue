@@ -1,15 +1,20 @@
 <template>
   <section id="testimonials" class="testimonials section-bg">
-    <div class="container" :data-aos="fade-up">
+    <!-- <div class="container" :data-aos="fade-up"> -->
+    <div class="container">
       <div class="section-title">
         <h2>Testimonials</h2>
       </div>
 
-      <div
+      <!-- <div
         class="owl-carousel testimonials-carousel"
         data-aos="zoom-in"
         data-aos-delay="100"
         style="display: block; opacity: 1;"
+      > -->
+      <div
+        class="owl-carousel testimonials-carousel"
+        style="display: block; opacity: 1"
       >
         <div class="testimonial-item">
           <img

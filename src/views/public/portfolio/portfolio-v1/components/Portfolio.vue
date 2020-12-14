@@ -1,6 +1,7 @@
 <template>
   <section id="portfolio" class="portfolio section-bg">
-    <div class="container" :data-aos="fade-up">
+    <!-- <div class="container" :data-aos="fade-up"> -->
+    <div class="container">
       <div class="section-title">
         <h2>Portfolio</h2>
         <p>
@@ -12,11 +13,12 @@
       </div>
 
       <div class="row">
-        <div
+        <!-- <div
           class="col-lg-12 d-flex justify-content-center"
           :data-aos="fade-up"
           :data-aos-delay="100"
-        >
+        > -->
+        <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-app">App</li>
@@ -26,11 +28,12 @@
         </div>
       </div>
 
-      <div
+      <!-- <div
         class="row portfolio-container"
         :data-aos="fade-up"
         :data-aos-delay="200"
-      >
+      > -->
+      <div class="row portfolio-container">
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="portfolio-wrap">
             <img

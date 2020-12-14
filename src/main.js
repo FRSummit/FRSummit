@@ -4,18 +4,6 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
 import firebase from 'firebase'
-// import './assets/portfolio/portfolio-v1/vendor/jquery/jquery.min.js'
-// import './assets/portfolio/portfolio-v1/vendor/bootstrap/js/bootstrap.bundle.min.js'
-// import './assets/portfolio/portfolio-v1/vendor/jquery.easing/jquery.easing.min.js'
-// import './assets/portfolio/portfolio-v1/vendor/php-email-form/validate.js'
-// import './assets/portfolio/portfolio-v1/vendor/waypoints/jquery.waypoints.min.js'
-// import './assets/portfolio/portfolio-v1/vendor/counterup/counterup.min.js'
-// import './assets/portfolio/portfolio-v1/vendor/isotope-layout/isotope.pkgd.min.js'
-// import './assets/portfolio/portfolio-v1/vendor/venobox/venobox.min.js'
-// import './assets/portfolio/portfolio-v1/vendor/owl.carousel/owl.carousel.min.js'
-// import './assets/portfolio/portfolio-v1/vendor/typed.js/typed.min.js'
-// import './assets/portfolio/portfolio-v1/vendor/aos/aos.js'
-// import './assets/portfolio/portfolio-v1/js/main.js'
 
 var firebaseConfig = {
   apiKey: "AIzaSyAMDiMIvw1h0P4kxFY0caIp7m9ohAtdpaI",

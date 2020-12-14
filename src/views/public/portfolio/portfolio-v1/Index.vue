@@ -1,6 +1,5 @@
 <template>
   <div class="portfolio-v1">
-    <!-- ======= Mobile nav toggle button ======= -->
     <button type="button" class="mobile-nav-toggle d-xl-none">
       <i class="icofont-navigation-menu"></i>
     </button>
@@ -34,6 +33,7 @@ import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import env from '../../../../env'
 
 export default {
   components: {
@@ -63,21 +63,21 @@ export default {
       // externalScript.setAttribute('src', '../../../../assets/portfolio/portfolio-v1/vendor/jquery/jquery.min.js');
       // document.body.appendChild(externalScript);
       let portfolio_v1_scripts = [
-        "../../../../assets/portfolio/portfolio-v1/vendor/jquery/jquery.min.js",
-        "../../../../assets/portfolio/portfolio-v1/vendor/bootstrap/js/bootstrap.bundle.min.js",
-        "../../../../assets/portfolio/portfolio-v1/vendor/jquery.easing/jquery.easing.min.js",
-        "../../../../assets/portfolio/portfolio-v1/vendor/php-email-form/validate.js",
-        "../../../../assets/portfolio/portfolio-v1/vendor/waypoints/jquery.waypoints.min.js",
-        "../../../../assets/portfolio/portfolio-v1/vendor/counterup/counterup.min.js",
-        "../../../../assets/portfolio/portfolio-v1/vendor/isotope-layout/isotope.pkgd.min.js",
-        "../../../../assets/portfolio/portfolio-v1/vendor/venobox/venobox.min.js",
-        "../../../../assets/portfolio/portfolio-v1/vendor/owl.carousel/owl.carousel.min.js",
-        "../../../../assets/portfolio/portfolio-v1/vendor/typed.js/typed.min.js",
-        "../../../../assets/portfolio/portfolio-v1/vendor/aos/aos.js",
-        "../../../../assets/portfolio/portfolio-v1/js/main.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/vendor/jquery/jquery.min.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/vendor/bootstrap/js/bootstrap.bundle.min.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/vendor/jquery.easing/jquery.easing.min.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/vendor/php-email-form/validate.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/vendor/waypoints/jquery.waypoints.min.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/vendor/counterup/counterup.min.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/vendor/isotope-layout/isotope.pkgd.min.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/vendor/venobox/venobox.min.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/vendor/owl.carousel/owl.carousel.min.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/vendor/typed.js/typed.min.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/vendor/aos/aos.js",
+        env.baseUrl + "/assets/portfolio/portfolio-v1/js/main.js",
       ];
       for (let i = 0; i < portfolio_v1_scripts.length; i++) {
-        console.log(portfolio_v1_scripts[i]);
+        // console.log(portfolio_v1_scripts[i]);
         let externalScript = document.createElement("script");
         externalScript.setAttribute("src", portfolio_v1_scripts[i]);
         document.body.appendChild(externalScript);

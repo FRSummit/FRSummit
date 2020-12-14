@@ -1,6 +1,7 @@
 <template>
   <section id="services" class="services">
-    <div class="container" :data-aos="fade-up">
+    <!-- <div class="container" :data-aos="fade-up"> -->
+    <div class="container">
       <div class="section-title">
         <h2>Services</h2>
         <p>
@@ -12,11 +13,12 @@
       </div>
 
       <div class="row">
-        <div
+        <!-- <div
           class="col-lg-4 col-md-6 d-flex align-items-stretch"
           data-aos="zoom-in"
           data-aos-delay="100"
-        >
+        > -->
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="icon-box iconbox-blue">
             <div class="icon">
               <svg
