@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
 import firebase from 'firebase'
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/js/all.js'
 
 var firebaseConfig = {
   apiKey: "AIzaSyAMDiMIvw1h0P4kxFY0caIp7m9ohAtdpaI",

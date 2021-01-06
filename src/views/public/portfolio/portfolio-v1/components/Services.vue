@@ -18,7 +18,7 @@
           data-aos="zoom-in"
           data-aos-delay="100"
         > -->
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="icon-box iconbox-blue">
             <div class="icon">
               <svg
@@ -192,8 +192,123 @@
               aspernatur
             </p>
           </div>
-        </div>
+        </div> -->
+
+
+        <div class="icon-box iconbox-teal" v-for="(service, i) in service_list" :key="i">
+            <div class="icon" style="background: #222;">
+              <!-- <svg
+                width="100"
+                height="100"
+                viewBox="0 0 600 600"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke="none"
+                  stroke-width="0"
+                  fill="#f5f5f5"
+                  d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"
+                ></path>
+              </svg> -->
+              <i :class="service.icon_class"></i>
+            </div>
+            <h4><a href="">{{ service.name }}</a></h4>
+            <p>{{ service.description }}</p>
+          </div>
+
+
+
+
       </div>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      service_list: [
+        {
+          name: "Web Design And Development",
+          description: "I prefer java to develop web application",
+          icon_class: "fab fa-html5"
+        },
+        {
+          name: "Web Design And Development",
+          description: "I prefer java to develop web application",
+          icon_class: "fas fa-code"
+        },
+        {
+          name: "Web Design And Development",
+          description: "I prefer java to develop web application",
+          icon_class: "fas fa-file-code"
+        },
+        {
+          name: "Python",
+          description: "I prefer java to develop web application",
+          icon_class: "fab fa-python"
+        },
+        {
+          name: "Java",
+          description: "I prefer java to develop web application",
+          icon_class: "fab fa-java"
+        },
+        {
+          name: "Javascript",
+          description: "I prefer java to develop web application",
+          icon_class: "fab fa-js"
+        },
+        {
+          name: "Vyejs",
+          description: "I prefer java to develop web application",
+          icon_class: "fab fa-vuejs"
+        },
+        {
+          name: "Reactjs",
+          description: "I prefer java to develop web application",
+          icon_class: "fab fa-react"
+        },
+        {
+          name: "Nodejs",
+          description: "I prefer java to develop web application",
+          icon_class: "fab fa-node"
+        },
+        {
+          name: "Database",
+          description: "I prefer java to develop web application",
+          icon_class: "fas fa-database"
+        },
+        {
+          name: "Server",
+          description: "I prefer java to develop web application",
+          icon_class: "fas fa-server"
+        },
+        {
+          name: "3D Modeling",
+          description: "I prefer java to develop web application",
+          icon_class: "fas fa-cubes"
+        },
+        {
+          name: "Firebase",
+          description: "I prefer java to develop web application",
+          icon_class: "fas fa-code-branch"
+        },
+        {
+          name: "CSS 3",
+          description: "I prefer java to develop web application",
+          icon_class: "fab fa-css3"
+        },
+      ]
+    }
+  }
+}
+</script>
+
+<style scoped>
+.icon svg {
+  background: yellowgreen;
+  width: 100px;
+  height: 100px;
+}
+</style>

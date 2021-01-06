@@ -5,10 +5,10 @@
       <div class="section-title">
         <h2>Facts</h2>
         <p>
-          Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-          aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-          quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-          fugiat sit in iste officiis commodi quidem hic quas.
+          Software engineering or programming is nothing but levels of games.
+          Every level is challenging and have to be pass to find out the
+          solutions of the problems. Other hand there are lots of new this to
+          learn.
         </p>
       </div>
 
@@ -16,7 +16,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="count-box">
             <i class="icofont-simple-smile"></i>
-            <span data-toggle="counter-up">232</span>
+            <span data-toggle="counter-up">30</span>
             <p>Happy Clients</p>
           </div>
         </div>
@@ -24,7 +24,7 @@
         <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
           <div class="count-box">
             <i class="icofont-document-folder"></i>
-            <span data-toggle="counter-up">521</span>
+            <span data-toggle="counter-up">85</span>
             <p>Projects</p>
           </div>
         </div>
@@ -32,7 +32,7 @@
         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
           <div class="count-box">
             <i class="icofont-live-support"></i>
-            <span data-toggle="counter-up">1,463</span>
+            <span data-toggle="counter-up">13500</span>
             <p>Hours Of Support</p>
           </div>
         </div>
@@ -40,7 +40,7 @@
         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
           <div class="count-box">
             <i class="icofont-users-alt-5"></i>
-            <span data-toggle="counter-up">15</span>
+            <span data-toggle="counter-up">5</span>
             <p>Hard Workers</p>
           </div>
         </div>

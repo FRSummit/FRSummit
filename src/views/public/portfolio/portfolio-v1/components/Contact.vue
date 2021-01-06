@@ -12,19 +12,19 @@
             <div class="address">
               <i class="icofont-google-map"></i>
               <h4>Location:</h4>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <p>{{ address }}</p>
             </div>
 
             <div class="email">
               <i class="icofont-envelope"></i>
               <h4>Email:</h4>
-              <p>info@example.com</p>
+              <p>{{ email }}</p>
             </div>
 
             <div class="phone">
               <i class="icofont-phone"></i>
               <h4>Call:</h4>
-              <p>+1 5589 55488 55s</p>
+              <p>{{ phone }}</p>
             </div>
           </div>
         </div>
@@ -101,3 +101,17 @@
     </div>
   </section>
 </template>
+
+<script>
+import defaultData from '../data'
+
+export default {
+  data() {
+    return {
+      address: defaultData.address.full,
+      phone: defaultData.phone,
+      email: defaultData.email,
+    }
+  }
+}
+</script>
